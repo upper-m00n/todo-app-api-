@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo List App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+  <div class="container py-4">
+    <h1 class="text-center mb-4 text-light">Todo List App</h1>
+
+    <div class="row mb-3">
+      <div class="col-md-4 mb-2">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search task...">
+      </div>
+      <div class="col-md-4 mb-2">
+        <input type="date" id="fromDate" class="form-control">
+      </div>
+      <div class="col-md-4 mb-2">
+        <input type="date" id="toDate" class="form-control">
+      </div>
+    </div>
+
+    <form id="addTodoForm" class="d-flex gap-2 mb-4">
+      <input type="text" id="todoInput" class="form-control" placeholder="Add a new todo..." required>
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+  
+    <ul id="todoList" class="list-group mb-4"></ul>
+
+   
+    <nav>
+      <ul id="pagination" class="pagination justify-content-center"></ul>
+    </nav>
+
+   
+    <div id="loader" class="text-center" style="display:none;">
+      <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+   
+    <div id="errorMsg" class="alert alert-danger d-none text-center"></div>
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+</html>
